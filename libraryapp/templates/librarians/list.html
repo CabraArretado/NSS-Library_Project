@@ -8,11 +8,12 @@
 </head>
 
 <body>
-    <h1>Librarians</h1>
+    <h1>Librarian</h1>
 
     <ol>
         {% for librarian in all_librarians %}
-        <li>{{ librarian.first_name }} {{ librarian.last_name }}</li>
+        <li><a href="{% url 'libraryapp:librarian' librarian.id %}">username: {{ librarian.user }}</a>
+            of email: {{librarian.email}}</li>
         {% endfor %}
     </ol>
 </body>
